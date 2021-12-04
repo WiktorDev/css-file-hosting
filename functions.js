@@ -14,7 +14,7 @@ exports.createFile=(content, req, res)=>{
   var id = makeid(10);
   var url = config.base_url+id+".css";
   fs.writeFile(`./public/${id}.css`,content, function(result){
-    res.render('status', {code: '404', message: "Plik zostal pomyslnie wyslany! Znajduje sie pod linkiem: <a href="+url+">"+url+"</a>"})
+    res.render('status', {code: 'Sukces!', message: "Plik zostal pomyslnie wyslany! Znajduje sie pod linkiem: <a href="+url+">"+url+"</a>"})
     console.log("Plik zostal wyslany!")
   })
 }
