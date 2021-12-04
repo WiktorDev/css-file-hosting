@@ -1,0 +1,6 @@
+{
+    "port": 3000,
+    "id_lenght": 10,
+    "base_url": "http://localhost:3000/",
+    "app_name": "Hosting plikow CSS1"
+}

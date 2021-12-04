@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= config.app_name %></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="topnav">
+            <a><%= config.app_name %></a>
+            <form action="/send" method="POST">
+                <button type="submit" class="btn success" id="btn">Wyslij</button>
+                <input type="hidden" name="data" id="data">
+            </form>
+        </div>
+        <div id="code_editor"></div>
+    </div>
+    
+    <script>
+        let codeArea = new CodeFlask('#code_editor', {
+            language: 'css',
+            lineNumbers: true,
+        })
+        let code = String.raw `body { background: #fff; }`
+        codeArea.updateCode(code)
+
+        codeArea.onUpdate((code) => {
+            document.getElementById('data').setAttribute('value', codeArea.getCode())
+        });
+    </script>
+</body>
+</html>
