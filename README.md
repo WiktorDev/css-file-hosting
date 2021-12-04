@@ -1,7 +1,7 @@
 # css-file-hosting
 Easy css file online editor and hosting
 
-### Configuration
+### Configuration (config.json)
 
 ```json
 {
