@@ -1,6 +1,5 @@
 # css-file-hosting
 Easy css file online editor and hosting <br>
-Demo: https://hosting.wiktor.tech/
 
 ### Configuration (config.json)
 
